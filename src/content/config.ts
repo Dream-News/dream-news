@@ -11,7 +11,7 @@ const news = defineCollection({
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 		author: z.string().optional(),
-		tags: z.array(z.string()).optional(),
+		tags: z.array(z.string()),
 	}),
 });
 
