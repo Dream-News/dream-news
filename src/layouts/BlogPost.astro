@@ -7,7 +7,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'news'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, author } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, author, tags } = Astro.props;
 ---
 
 <html lang="zh-cn">
@@ -71,6 +71,24 @@ const { title, description, pubDate, updatedDate, heroImage, author } = Astro.pr
 			.last-updated-on {
 				font-style: italic;
 			}
+			.tags-container{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				margin-bottom: 0.5em;
+			}
+			.tag-link{
+				margin: auto;
+				margin-bottom: 0.5em;
+				color: rgb(var(--gray));
+				text-decoration: none;
+			}
+			.tag{
+				margin: auto;
+				padding: 0.25em 0.5em;
+				border-radius: 4px;
+				background-color: rgb(var(--gray-light));
+			}
 		</style>
 	</head>
 
@@ -97,6 +115,16 @@ const { title, description, pubDate, updatedDate, heroImage, author } = Astro.pr
 							<div class="author">
 								<div class="avatar-name">{author}</div>
 							</div>
+						</div>
+						<div class="tags-container">
+						{
+							tags.map((tag) => (
+								
+								<a href={`/tags/${tag}`} class="tag-link">
+									<div class="tag">{tag}</div>
+								</a>
+							))
+						}
 						</div>
 						<h1>{title}</h1>
 						<hr />

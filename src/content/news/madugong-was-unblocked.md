@@ -4,6 +4,7 @@ description: ''
 pubDate: 'Jan 16 2024'
 author: '陈做梦'
 heroImage: '/cover/madugong-was-unblocked.png'
+tags: ['国内新闻']
 ---
 
 今天晚上，备受关注的公知人物马督工在 Bilibili 平台更新了新的一期睡前消息。这不仅标志着马督工的“放寒假”期结束，同时也预示着他在网络舆论场的重要地位再次得到肯定。此外，包括知乎在内的多个网络平台也解封了与“睡前消息”相关的账号。

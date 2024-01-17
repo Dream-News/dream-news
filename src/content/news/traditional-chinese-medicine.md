@@ -4,6 +4,7 @@ description: ''
 pubDate: 'Dec 30 2020'
 author: '陈做梦'
 heroImage: '/cover/traditional-chinese-medicine.jpg'
+tags: ['国内新闻']
 ---
 
 ## 中药迎来“强监管时代”
