@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+type Props = CollectionEntry<'author'>['data'];
+
+const { name,avatar } = Astro.props;
+---
+
+<html lang="zh-cn">
+	<head>
+		<BaseHead title={name} description={name} />
+		<style>
+			main {
+				width: calc(100% - 2em);
+				max-width: 100%;
+				margin: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+                {
+                    name && <h1>{name}</h1>
+                }
+                {
+                    avatar && <img src={avatar} alt={name} />
+                }
+                <slot />
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

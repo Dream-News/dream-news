@@ -53,6 +53,11 @@ const { title, description, pubDate, updatedDate, heroImage, author, tags } = As
 				margin-bottom: 0.5em;
 				color: rgb(var(--gray));
 			}
+			.author-link{
+				margin: auto;
+				color: rgb(var(--gray));
+				text-decoration: none;
+			}
 			.author{
 				margin: auto;
 				display: flex;
@@ -112,9 +117,11 @@ const { title, description, pubDate, updatedDate, heroImage, author, tags } = As
 									)
 								}
 							</div>
-							<div class="author">
-								<div class="avatar-name">{author}</div>
-							</div>
+							<a class="author-link" href=`/author/${author}`>
+								<div class="author">
+									<div class="avatar-name">{author}</div>
+								</div>
+							</a>
 						</div>
 						<div class="tags-container">
 						{

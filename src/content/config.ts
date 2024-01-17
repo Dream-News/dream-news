@@ -15,4 +15,12 @@ const news = defineCollection({
 	}),
 });
 
-export const collections = { news };
+const author = defineCollection({
+	type: 'data',
+	schema: z.object({
+		name: z.string(),
+		avatar: z.string(),
+	}),
+});
+
+export const collections = { news, author };
